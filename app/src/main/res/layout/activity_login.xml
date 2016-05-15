@@ -42,9 +42,9 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/textView"
             android:hint="E-mail"
+            android:inputType="text"
             android:textColor="#000000"
-            android:textSize="15dp"
-            android:inputType="text"/>
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/login"
@@ -121,5 +121,8 @@
             android:text="Forgot Password"
             android:textColor="#fff"
             android:textSize="13dp" />
+
+        
+
     </RelativeLayout>
 </LinearLayout>
