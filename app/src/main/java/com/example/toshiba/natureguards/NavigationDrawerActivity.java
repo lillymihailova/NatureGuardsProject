@@ -85,14 +85,14 @@ public class NavigationDrawerActivity extends AppCompatActivity
         int id = item.getItemId();
         android.app.FragmentManager manager=getFragmentManager();
         if (id == R.id.nav_camera) {
-            Intent intent = new Intent(this, SendActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
-           // manager.beginTransaction().replace(R.id.content_frame,new SendFragment());
+
         } else if (id == R.id.nav_gallery) {
             if(isOnline()==true) {
                 Intent previewIntent = new Intent(this, PreviewActivity.class);
                 startActivity(previewIntent);
-                // manager.beginTransaction().replace(R.id.content_frame,new PreviewFragment());
+
             }else{
                 Toast.makeText(getApplicationContext(), "No Network Connection", Toast.LENGTH_LONG).show();
             }

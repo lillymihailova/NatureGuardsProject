@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NatureGuards-develop.iml" filepath="$PROJECT_DIR$/NatureGuards-develop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NatureGuardsProject.iml" filepath="$PROJECT_DIR$/NatureGuardsProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
