@@ -67,13 +67,13 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/cbox_gorskoto"
+                android:id="@+id/cbox_forest_service"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Служба по горите" />
 
             <RadioButton
-                android:id="@+id/cbox_grajdanska"
+                android:id="@+id/cbox_civil_protection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Гражданска Защита" />
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/cbox_okolona_sreda"
+                android:id="@+id/cbox_enviroment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Служба Околна Среда" />

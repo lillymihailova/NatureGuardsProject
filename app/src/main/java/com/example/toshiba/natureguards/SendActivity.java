@@ -52,12 +52,12 @@ public class SendActivity extends AppCompatActivity {
     ImageView imgSend;
     @Bind(R.id.cbox_animals_protected)
     RadioButton cBoxAnimalProtected;
-    @Bind(R.id.cbox_gorskoto)
-    RadioButton cBoxGorskoto;
-    @Bind(R.id.cbox_grajdanska)
-    RadioButton cBoxgrajdanska;
-    @Bind(R.id.cbox_okolona_sreda)
-    RadioButton cBoxOkolnaSreda;
+    @Bind(R.id.cbox_forest_service)
+    RadioButton cBoxForestService;
+    @Bind(R.id.cbox_civil_protection)
+    RadioButton cBoxCivilProtection;
+    @Bind(R.id.cbox_enviroment)
+    RadioButton cBoxEnvironment;
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
     private Bitmap imgBitmap;
     List<Events> event = new ArrayList<>();
@@ -67,7 +67,7 @@ public class SendActivity extends AppCompatActivity {
     Firebase ref;
 
     boolean isChecking = true;
-    int mCheckedId = R.id.cbox_gorskoto;
+    int mCheckedId = R.id.cbox_forest_service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,10 +127,10 @@ public class SendActivity extends AppCompatActivity {
             edtTxtDescription.setError("description is required");
             fl = false;
         }
-        if (!cBoxGorskoto.isChecked() &&
-                !cBoxgrajdanska.isChecked() &&
+        if (!cBoxForestService.isChecked() &&
+                !cBoxCivilProtection.isChecked() &&
                 !cBoxAnimalProtected.isChecked() &&
-                !cBoxOkolnaSreda.isChecked()) {
+                !cBoxEnvironment.isChecked()) {
             fl = false;
         }
 
@@ -138,17 +138,17 @@ public class SendActivity extends AppCompatActivity {
     }
 
     public String getCheckBox() {
-        if (cBoxgrajdanska.isChecked()) {
-            getCheckBox = cBoxgrajdanska.getText().toString();
+        if (cBoxCivilProtection.isChecked()) {
+            getCheckBox = cBoxCivilProtection.getText().toString();
         }
-        if (cBoxOkolnaSreda.isChecked()) {
-            getCheckBox = cBoxOkolnaSreda.getText().toString();
+        if (cBoxEnvironment.isChecked()) {
+            getCheckBox = cBoxEnvironment.getText().toString();
         }
         if (cBoxAnimalProtected.isChecked()) {
             getCheckBox = cBoxAnimalProtected.getText().toString();
         }
-        if (cBoxGorskoto.isChecked()) {
-            getCheckBox = cBoxGorskoto.getText().toString();
+        if (cBoxForestService.isChecked()) {
+            getCheckBox = cBoxForestService.getText().toString();
         }
         return getCheckBox;
     }
@@ -182,16 +182,16 @@ public class SendActivity extends AppCompatActivity {
     public void sendEmail() {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         String recipient = "";
-        if (cBoxGorskoto.isChecked()) {
+        if (cBoxForestService.isChecked()) {
             recipient = recipient + " lillymihailova@abv.bg,";
         }
         if (cBoxAnimalProtected.isChecked()) {
             recipient = recipient + " pkatrankiev@gmail.com,";
         }
-        if (cBoxOkolnaSreda.isChecked()) {
+        if (cBoxEnvironment.isChecked()) {
             recipient = recipient + " nikolay.nikolov92@gmail.com,";
         }
-        if (cBoxgrajdanska.isChecked()) {
+        if (cBoxCivilProtection.isChecked()) {
             recipient = recipient + " sity_teh@abv.bg,";
         }
 
